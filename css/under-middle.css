@@ -1,0 +1,614 @@
+/* Start variables */
+:root {
+    --main-color: #06a6d0;
+    --secondary-color: #00c7fc;
+    --back-color: #1f2021;
+}
+
+/* End variables */
+
+
+.under-middle {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
+    text-align: center;
+    gap: 25px;
+    margin-top: 100px;
+    margin-left: 30px;
+}
+
+.under-middle h2 {
+    margin-bottom: 70px;
+    font-weight: 500;
+}
+
+.under-middle p {
+    color: gray;
+    margin-bottom: 40px;
+}
+
+.under-middle .term .picture {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-size: cover;
+
+}
+
+.under-middle .term .people > div:first-child .picture {
+    background-image: url(../images/person1.jfif);
+}
+
+.under-middle .term .people > div:nth-child(2) .picture {
+    background-image: url(../images/person2.jfif);
+}
+
+
+.under-middle .term .people {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 80px;
+    justify-content: space-between;
+
+}
+
+.under-middle .term .people > div {
+    text-align: left;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.under-middle .person-description {
+    border-bottom: 1px solid black;
+    padding-bottom: 10px;
+}
+
+.people p {
+    text-align: right;
+    color: #999;
+    margin-bottom: 0;
+    margin-right: 45px;
+}
+
+.under-middle .skill > div {
+    width: 96%;
+    height: 40px;
+    background-color: #cecbcb;
+    position: relative;
+}
+
+.under-middle .skill > p:not(:first-of-type) {
+    text-align: left;
+    margin-bottom: 5px;
+    color: var(--back-color);
+}
+
+.under-middle .skill > div::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: var(--secondary-color);
+}
+
+.under-middle .skill > div:first-of-type::before {
+    width: 90%;
+}
+.under-middle .skill > div:nth-of-type(2)::before {
+    width: 80%;
+}
+.under-middle .skill > div:nth-of-type(3)::before {
+    width: 70%;
+}
+.under-middle .skill > div:nth-of-type(4)::before {
+    width: 75%;
+}
+
+.under-middle .skill {
+    position: relative;
+}
+
+.under-middle .skill span.percent {
+    position: absolute;
+    background-color: var(--back-color);
+    color: white;
+    padding: 5px;
+    top: 0;
+}
+
+.under-middle .skill span:first-of-type {
+    top: 180px;
+    right: 12%;
+}
+
+.under-middle .skill span:nth-of-type(2) {
+    top: 260px;
+    right: 20%;
+}
+
+ .under-middle .skill span:nth-of-type(3) {
+    top: 340px;
+    right: 30%;
+}
+
+.under-middle .skill span:nth-of-type(4) { 
+    top: 420px;
+    right: 26%;
+} 
+
+.under-middle .skill span::before {
+    content: '';
+    border: 10px solid black;
+    position: absolute;
+    bottom: -15px;
+    border-color: black transparent transparent ;
+}
+
+@media (max-width:600px) {
+    .under-middle {
+        grid-template-columns: 100%;
+        margin-left: 20px;
+    }
+
+    .under-middle .person-description {
+        font-size: 12px;
+    }
+
+    .under-middle .skill span:first-of-type {
+        top: 195px;
+    }
+
+    .under-middle .skill span:nth-of-type(2) {
+        top: 275px;
+    }
+
+    .under-middle .skill span:nth-of-type(3) {
+        top: 355px;
+    }
+
+    .under-middle .skill span:nth-of-type(4) {
+        top: 435px;
+    }
+
+}
+
+
+.quote {
+    height: 500px;
+    width: 100%;
+    background-color: var(--back-color);
+    text-align: center;
+    color: white;
+    margin-top: 100px;
+    
+}
+
+.quote .container {
+    padding-top: 200px;
+}
+
+.quote .container p:first-child {
+    font-size: 20px;
+}
+
+.quote .container p:last-child {
+    font-size: 13px;
+    margin-top: 50px;
+}
+
+.price {
+    position: relative;
+    margin-top: 100px;
+}
+
+
+#price {
+    text-align: center;
+
+}
+
+#price h2 {
+    font-weight: 500;
+    font-size: 30px;
+}
+
+#price p {
+    color: #555;
+}
+
+#price span {
+    position: relative;
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    border: 1px solid black;
+    border-radius: 50%;
+    background-color: white;
+
+}
+
+#price span::before {
+    content: '';
+    position: absolute;
+    width: 60px;
+    border: 1px solid #0000003d;
+    top: 2px;
+    z-index: -1;
+    left: -28px;
+}
+
+
+.prices {
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+}
+.prices > div {
+    margin-top: 70px;
+}
+
+.prices > div > div {
+    border: 1px solid;
+    margin-right: 30px;
+    margin-left: 30px;
+    border-color: var(--secondary-color) transparent var(--secondary-color);
+}
+
+.prices > div > p:not(:last-child){
+    color: var(--back-color);
+
+}
+
+.prices > div > div p:nth-of-type(2) {
+    font-weight: 500;
+    font-size: 50px;
+}
+
+.prices > div > div p {
+    position: relative;
+}
+
+.prices > div > div p span:first-child {
+    font-weight: 500;
+    font-size: 13px;
+}
+
+.prices > div > p:not(:last-child) {
+    margin-left: 150px;
+    margin-right: 150px;
+    padding-bottom: 30px;
+    border: 1px solid;
+    border-color: transparent transparent var(--secondary-color);
+}
+
+.prices > div > p:last-child {
+    padding: 15px;
+    background-color: var(--secondary-color);
+    color: white;
+    display: inline-block;
+    cursor: pointer;
+}
+
+
+.prices > div > div p span:last-child {
+    position: absolute;
+    left: 75px;
+    font-size: 20px;
+}
+
+@media (min-width: 1065px) and (max-width: 1415px) {
+    .prices {
+        grid-template-areas: '_ _ _' '. four .';
+    }
+    .prices > div:last-child {
+        grid-area: four;
+    }
+}
+
+
+.small-contact {
+    margin-top: 100px;
+    text-align: center;
+}
+
+
+.small-contact p:first-child {
+    font-size: 20px;
+}
+
+.small-contact p:last-child {
+    padding: 10px 20px;
+    background-color: var(--secondary-color);
+    color: white;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.mail {
+    background-color: var(--back-color);
+    height: 500px;
+    width: 100%;
+    padding-top: 188px;
+    color: white;
+    margin-top: 90px;
+}
+
+.mail .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+
+}
+.mail .container div {
+    flex: 1;
+    width: 70%;
+    position: relative;
+}
+
+.mail i {
+    position: absolute;
+    top: 33px;
+    left: 18px;
+    font-size: 23px;
+
+}
+.mail .container div input {
+    height: 60px;
+    border: 1px solid white;
+    background-color: var(--back-color);
+    width: 70%;
+    padding-left: 60px;
+    color: white;
+    outline: none;
+}
+
+
+.mail .container div input::placeholder {
+    color: white;
+
+}
+
+.mail .container div p:first-of-type {
+    background-color: var(--secondary-color);
+    padding: 21px;
+    display: inline-block;
+    margin-left: -6px;
+    cursor: pointer;
+}
+
+.mail .container > p {
+    width: 30%;
+}
+
+@media (min-width: 992px) {
+    .mail i {
+        top: 33px;
+        left: 18;
+    }
+
+    
+}
+
+
+@media (max-width: 665px) {
+    .mail i {
+        top: 20px;
+        left: 15px;
+    }
+
+    .mail .container div p:first-of-type {
+        transform: translateX(5px);
+    }
+
+    .mail .container > p {
+        transform: translate(-60px, -40px);
+    }
+}
+
+.cont {
+    position: relative;
+    margin-top: 70px;
+    margin-bottom: 80px;
+}
+
+
+#contact {
+    text-align: center;
+}
+
+#contact h2 {
+    font-weight: 500;
+    font-size: 30px;
+}
+
+#contact p {
+    color: #555;
+}
+
+#contact span {
+    position: relative;
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    border: 1px solid black;
+    border-radius: 50%;
+    background-color: white;
+
+}
+
+#contact span::before {
+    content: '';
+    position: absolute;
+    width: 60px;
+    border: 1px solid #0000003d;
+    top: 2px;
+    z-index: -1;
+    left: -28px;
+}
+
+
+.info .container {
+    display: flex;
+    gap: 20px;
+
+}
+
+.info .name {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.info .numbers {
+    width: 30%;
+}
+
+.info .name input {
+    padding-left: 60px;
+    margin-bottom: 30px;
+    height: 60px;
+    position: relative;
+}
+
+.info .name input:last-of-type {
+    height: 200px;
+}
+
+.info .container .numbers > div h3:first-of-type {
+    margin-bottom: 40px;
+    margin-top: 0;
+}
+
+
+.info .container .numbers > div:first-of-type {
+    margin-bottom: 85px;
+}
+
+@media (max-width: 550px) {
+    .info .container {
+        text-align: center;
+        flex-direction: column;
+
+    }
+    .info .container .numbers { 
+        margin-left: 50%;
+        transform: translateX(-50%);
+    }
+
+
+    .info .container .numbers > div {
+        border-bottom: 1px solid gray;
+    }
+}
+
+.info > div:last-of-type {
+    background-color: var(--secondary-color);
+    color: white;
+    margin-top: 10px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    padding: 20px;
+    display: inline-block;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.info > div:last-of-type:hover {
+    opacity: 0.8;
+}
+
+footer {
+    background-color: var(--back-color);
+    height: 400px;
+    margin-top: 100px;
+}
+
+footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer .icon {
+    font-size: 30px;
+    width: 200px;
+    position: relative;
+    margin-top: 30px;
+}
+
+footer .icon i {
+    color: var(--secondary-color);
+}
+
+footer .icon p:first-of-type {
+    position: absolute;
+    top: -24px;
+    right: 60px;
+    color: white;
+}
+
+footer .icon p:nth-of-type(2) {
+    position: absolute;
+    top: -15px;
+    font-size: 15px;
+    right: 60px;
+    color: var(--main-color);
+    font-weight: 800;
+}
+
+footer .container > p {
+    color: white;
+    font-size: 30px;
+    transform: translateX(-20px);
+    margin-top: 54px;
+    font-weight: 300;
+}
+
+footer hr {
+    border: 1px solid white;
+    width: 315px;
+    transform: translateX(-20px);
+}
+
+footer .container > div:nth-of-type(2) {
+    display: flex;
+    color: white;
+    justify-content: space-between;
+    width: 200px;
+    font-size: 20px;
+    margin-left: -40px;
+    margin-top: 25px;
+}  
+
+footer .container > p:last-of-type {
+    margin-top: 85px;
+    font-size: 20px;
+}
+
+footer .container > p:last-of-type span {
+    color: var(--main-color);
+}
+
+footer .container > p:last-of-type i {
+    margin-right: 10px;
+}
+
+footer .container > div:last-of-type i {
+    cursor: pointer;
+}
+
+@media (max-width: 420px) {
+    footer .container {
+        padding-left: 50px;
+    }
+    footer .container > p:last-of-type {
+        text-align: center;
+    }
+}
